@@ -19,17 +19,22 @@
 
 
 # Body
-
-
-
+def count(string,letter):
+	ctr=0
+	for char in string:
+		if char == letter:
+			ctr=ctr+1
+	print letter,"appears in",string,ctr,"times"
 
 ################################################################################
 def main():
 
     # Remove print("Hello World!") and add several functions calls to count()
     # below, passing various strings and letters
-    print("Hello World!") 
-    
+	string=raw_input("Input a string: ")
+	letter=raw_input("Input the letter: ")
+	count(string,letter)
+   
 
 if __name__ == '__main__':
     main()

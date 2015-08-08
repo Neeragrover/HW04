@@ -21,18 +21,29 @@
 
 ################################################################################
 # Imports
-
-
+import math
 # Body
-
-
-
+def eval_loop():
+	eval_result=""
+	while True:
+		input=raw_input("Please enter the expression to be evaluated: ")
+		if (input == "done"):
+			if (eval_result == ""):
+				print "No prior evaluations"
+			else:
+				print "The last expression evaluated to: ",eval_result
+			return
+		else:
+			eval_result = eval(input)
+			print "The expression evaluates to: ",eval_result
+			print(type(eval_result))
+			
 
 ################################################################################
 def main():
-    pass # Remove this line and uncomment below once eval_loop is defined.
-    # eval_loop()
-    
+	print "Hello"
+	eval_loop()
+	
 
 if __name__ == '__main__':
     main()
